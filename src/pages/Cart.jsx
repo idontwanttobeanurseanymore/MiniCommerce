@@ -3,9 +3,9 @@ import React from "react";
 export default function Cart() {
   return (
     <div className="cart">
-      <h1 className="cart__title">Carrito</h1>
+      <h2 className="cart__title">Carrito</h2>
       <div className="cart__items">
-        <p className="cart__placeholder">Lorem ipsum carrito vacío...</p>
+        <p className="cart__placeholder">Tu carrito está vacío.</p>
       </div>
     </div>
   );
