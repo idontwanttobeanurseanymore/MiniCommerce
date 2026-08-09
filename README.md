@@ -75,7 +75,7 @@ src/
  ├── context/      # Gestión de estado global con Context API
  ├── hooks/        # Hooks personalizados para lógica reutilizable
  ├── utils/        # Funciones auxiliares
- └── tests/        # Pruebas automatizadas
+ └── tests/        # Tests del proyecto
 ```
 
 ---
