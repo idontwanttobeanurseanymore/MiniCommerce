@@ -13,7 +13,7 @@ El objetivo del proyecto es practicar conceptos clave de frontend moderno como e
 - ✅ Consumir datos dinámicos desde una API REST
 - ✅ Implementar una arquitectura frontend limpia y escalable
 - ✅ Gestionar estado global (carrito)
-- ✅ Construir una UI responsive y accesible
+- Construir una UI responsive y accesible
 - Aplicar testing básico (unitario e integración)
 
 ---
@@ -99,9 +99,13 @@ src/
 ## 🔜 Próximas mejoras
 
 🔎 Filtros de productos
+
 💬 Pruebas de testing
+
 🎨 Mejora visual (UI/UX) + Dark Mode
+
 🦴 Skeleton loaders
+
 🤡 Animaciones
 
 ---
