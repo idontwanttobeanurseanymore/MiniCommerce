@@ -69,13 +69,13 @@ Permite obtener productos con información como título, precio, imagen y catego
 
 ```
 src/
- ├── components/
- ├── pages/
- ├── services/
- ├── context/
- ├── hooks/
- ├── utils/
- └── tests/
+ ├── components/   # Componentes reutilizables e independientes de la lógica de negocio
+ ├── pages/        # Páginas principales asociadas a rutas
+ ├── services/     # Lógica de acceso a datos (peticiones a APIs)
+ ├── context/      # Gestión de estado global con Context API
+ ├── hooks/        # Hooks personalizados para lógica reutilizable
+ ├── utils/        # Funciones auxiliares
+ └── tests/        # Pruebas automatizadas
 ```
 
 ---
@@ -98,15 +98,11 @@ src/
 
 ## 🔜 Próximas mejoras
 
-🔎 Filtros de productos
-
-💬 Pruebas de testing
-
-🎨 Mejora visual (UI/UX) + Dark Mode
-
-🦴 Skeleton loaders
-
-🤡 Animaciones
+- 🔎 Filtros de productos
+- 💬 Pruebas de testing
+- 🎨 Mejora visual (UI/UX) + Dark Mode
+- 🦴 Skeleton loaders
+- 🤡 Animaciones
 
 ---
 
@@ -135,7 +131,5 @@ Este proyecto está orientado a demostrar competencias reales de frontend en un 
 ---
 
 ## 📌 Autor
-
-Desarrollado como proyecto frontend para portfolio profesional.
 
 ---
