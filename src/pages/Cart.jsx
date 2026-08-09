@@ -16,6 +16,9 @@ export default function Cart() {
 
     return acc;
   }, []);
+  const total = groupedItems.reduce((acc, item) => {
+    return acc + item.price * item.quantity;
+  }, 0);
 
   if (cartItems.length === 0) {
     return <p>Tu carrito está vacío</p>;
@@ -49,6 +52,9 @@ export default function Cart() {
           </div>
         </div>
       ))}
+      <div className="cart__summary">
+        <h3 className="cart__total">Total: {total.toFixed(2)}€</h3>
+      </div>
     </div>
   );
 }

@@ -37,4 +37,22 @@
       color: $color-accent;
     }
   }
+  &__link {
+    position: relative;
+    display: inline-block;
+  }
+
+  &__badge {
+    position: absolute;
+    top: -6px;
+    right: -18px;
+
+    background-color: #ff8fa3;
+    color: white;
+    font-size: 0.7rem;
+    font-weight: bold;
+
+    padding: 2px 6px;
+    border-radius: 999px;
+  }
 }
