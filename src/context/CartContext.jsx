@@ -1,10 +1,17 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useEffect } from "react";
 
 export const CartContext = createContext();
 
 export function CartProvider({ children }) {
-  const [cartItems, setCartItems] = useState([]);
-
+  const [cartItems, setCartItems] = useState(() => {
+    try {
+      const savedCart = localStorage.getItem("cart");
+      return savedCart ? JSON.parse(savedCart) : [];
+    } catch (error) {
+      console.error("Error leyendo localStorage", error);
+      return [];
+    }
+  });
   const addToCart = (product) => {
     setCartItems((prev) => [...prev, product]);
   };
@@ -15,10 +22,18 @@ export function CartProvider({ children }) {
       if (index === -1) return prev;
 
       const newCart = [...prev];
-      newCart.splice(index, 1); // elimina SOLO uno
+      newCart.splice(index, 1);
 
       return newCart;
     });
+  };
+
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cartItems));
+  }, [cartItems]);
+
+  const clearCart = () => {
+    setCartItems([]);
   };
 
   return (
@@ -27,6 +42,7 @@ export function CartProvider({ children }) {
         cartItems,
         addToCart,
         removeFromCart,
+        clearCart,
       }}>
       {children}
     </CartContext.Provider>
