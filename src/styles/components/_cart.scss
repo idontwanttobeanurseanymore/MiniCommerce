@@ -1,0 +1,14 @@
+@use "../base/variables" as *;
+
+.cart {
+  margin-top: 2rem;
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    background: $color-white;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: $radius;
+  }
+}

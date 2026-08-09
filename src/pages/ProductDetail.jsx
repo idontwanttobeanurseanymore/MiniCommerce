@@ -32,11 +32,11 @@ export default function ProductDetail() {
   }
 
   if (error) {
-    return <p className="product-detail__error">{error}</p>;
+    return <p className="product-detail__error">Error: {error}</p>;
   }
 
   if (!product) {
-    return <p className="product-detail__error">Producto no encontrado</p>;
+    return <p className="product-detail__error">Producto no encontrado.</p>;
   }
 
   return (
@@ -50,7 +50,7 @@ export default function ProductDetail() {
           className="product-detail__image"
         />
 
-        <p className="product-detail__price">${product.price}</p>
+        <p className="product-detail__price">{product.price} €</p>
 
         <p className="product-detail__description">{product.description}</p>
       </div>
